@@ -1,24 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { FC } from 'react';
 import './App.css';
+import { OpponentsRatingRangeSelector } from './components/OpponentsRatingRangeSelector';
 
-function App() {
+const App: FC<{}> = () => {
+  function onChange(data: any): void {
+    console.log('on change opponents rating range data', data);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <OpponentsRatingRangeSelector value={1200} max={3000} min={0} onChange={onChange}/>
     </div>
   );
 }

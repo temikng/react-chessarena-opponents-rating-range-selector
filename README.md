@@ -1,3 +1,10 @@
+# Opponent's rating range selector component for chessarena.com
+
+## Todo:
+
+* Add styled-components
+* Add tests
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

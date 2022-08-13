@@ -1,0 +1,135 @@
+.opponents-rating-selector {
+  position: relative;
+  width: 514px;
+  height: 68px;
+  min-width: 298px;
+
+  border: 1px solid rgb(82, 82, 82);
+  border-radius: 3px;
+}
+
+.opponents-rating-selector__background {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  min-width: 100%;
+  max-width: 463px;
+  height: 33px;
+  background: url(./../../../public/media/main_page/opponents_rated_mobile.svg) center bottom / contain no-repeat;
+  z-index: 1;
+}
+
+.opponents-rating-selector__backdrops {
+  position: relative;
+  height: 100%;
+}
+
+.opponents-rating-selector__backdrop {
+  position: absolute;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+}
+
+.opponents-rating-selector__backdrop--left {
+  left: 0;
+}
+
+.opponents-rating-selector__backdrop--right {
+  right: 0;
+}
+
+.opponents-rating-selector__title {
+  position: absolute;
+  left: 12px;
+  top: 7px;
+  user-select: none;
+  font-style: normal;
+  font-family: Gerbera;
+  font-weight: 300;
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+  z-index: 3;
+}
+
+.opponents-rating-selector__values-output {
+  position: absolute;
+  right: 8px;
+  top: 13px;
+  user-select: none;
+  font-style: normal;
+  font-family: Gerbera;
+  font-weight: 300;
+  font-size: 22px;
+  color: rgb(255, 255, 255);
+  z-index: 3;
+}
+
+.opponents-rating-selector__selection {
+  position: absolute;
+  top: -1px;
+  height: calc(100% + 2px);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 3px;
+  cursor: ew-resize;
+  touch-action: none;
+  z-index: 4;
+}
+
+.opponents-rating-selector__selection::after,
+.opponents-rating-selector__selection::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 32px;
+  background-color: rgb(255, 255, 255);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.opponents-rating-selector__selection::after {
+  right: 3px;
+}
+
+.opponents-rating-selector__selection::before {
+  left: 3px;
+}
+
+.opponents-rating-selector__selection-handle {
+  position: absolute;
+  width: 15px;
+  height: 100%;
+  cursor: col-resize;
+  touch-action: none;
+  z-index: 5;
+}
+
+.opponents-rating-selector__selection-handle--left {
+  left: -8px;
+}
+
+.opponents-rating-selector__selection-handle--right {
+  right: -8px;
+}
+
+.opponents-rating-selector__value {
+  position: absolute;
+  bottom: -3.5px;
+  width: 7px;
+  height: 7px;
+  left: 200px;
+  background-color: rgb(255, 108, 88);
+  border-radius: 50%;
+  z-index: 6;
+}
+
+@media (max-width: 768px) {
+  .opponents-rating-selector {
+    width: 100%;
+  }
+
+  .opponents-rating-selector__background {
+    background: url(./../../../public/media/main_page/opponents_rated.svg) center bottom / contain no-repeat;
+  }
+}
